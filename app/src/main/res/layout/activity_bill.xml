@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.Bill">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="#65CDA8"
+        android:text="Bill"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Bill Type"
+        android:textSize="20dp"
+        />
+
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="25dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Amount"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="25dp"
+        android:hint="Date"
+        android:ems="10"
+        android:inputType="text|date"
+        android:textSize="20dp"
+        />
+
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="25dp"
+        android:ems="10"
+        android:hint="Comment"
+        android:inputType="text"
+        android:textSize="20dp"/>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:text="Add"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:backgroundTint="#65CDA8"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="50dp"
+
+        />
+
+
+</LinearLayout>
