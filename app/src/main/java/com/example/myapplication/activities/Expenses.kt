@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.res.FontResourcesParserCompat.FetchStrategy
 import com.example.myapplication.R
 import com.example.myapplication.models.BillModel
 import com.google.firebase.database.FirebaseDatabase
@@ -36,6 +37,28 @@ class Expenses : AppCompatActivity() {
                 intent.getStringExtra("billType").toString()
              )
          }
+         deletebtn.setOnClickListener{
+             deleteRecord(
+                 intent.getStringExtra("billId").toString()
+             )
+         }
+    }
+    private fun deleteRecord(
+        id: String
+    ){
+        val dbref = FirebaseDatabase.getInstance().getReference("bills").child(id)
+        val mTask = dbref.removeValue()
+
+        mTask.addOnSuccessListener {
+            Toast.makeText(
+                this, "Bill details deleted", Toast.LENGTH_LONG).show()
+
+                val intent = Intent(this, fetchingActivity::class.java)
+                finish()
+                startActivity(intent)
+        }.addOnFailureListener{error->
+            Toast.makeText(this,"Deleting error ${error.message}",Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun initView() {

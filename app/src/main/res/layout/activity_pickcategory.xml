@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/btimage"
     tools:context=".activities.PickCategory">
 
 
@@ -14,8 +15,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:text="Add"
-        android:textSize="20dp"/>
+        android:backgroundTint="#65CDA8"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Add your Expenses"
+        android:textSize="25dp"/>
 
     <Button
         android:id="@+id/button3"
@@ -23,7 +27,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:text="Fetch"
-        android:textSize="20dp"/>
+        android:backgroundTint="#65CDA8"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="See your Expenses"
+        android:textSize="25dp"/>
 
 </LinearLayout>

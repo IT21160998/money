@@ -60,7 +60,7 @@ class Bill : AppCompatActivity() {
 
                 val billId = dbRef.push().key!!
 
-                val bills = BillModel(billId,billType,billAmount,billComment)
+                val bills = BillModel(billId,billType,billAmount,billDate,billComment)
 
                 dbRef.child(billId).setValue(bills)
                     .addOnCompleteListener {

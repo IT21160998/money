@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/btimage"
     tools:context=".activities.Bill">
 
     <TextView
@@ -13,8 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:background="#65CDA8"
-        android:text="Bill"
+        android:text="Expenses"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="50dp"
@@ -29,7 +29,7 @@
         android:layout_marginLeft="25dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="Bill Type"
+        android:hint="Expenses Type"
         android:textSize="20dp"
         />
 
@@ -73,12 +73,12 @@
         android:layout_height="60dp"
         android:text="Add"
         android:textSize="25dp"
+        android:textStyle="bold"
         android:textColor="@color/black"
         android:backgroundTint="#65CDA8"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:layout_marginBottom="50dp"
-
         />
 
 

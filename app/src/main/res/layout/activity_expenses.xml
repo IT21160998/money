@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/btimage"
     tools:context=".activities.Expenses">
 
     <!-- Update Button -->
@@ -11,8 +12,12 @@
         android:id="@+id/updatebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:text="Update"
+        android:backgroundTint="#65CDA8"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/deletebtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,8 +29,12 @@
         android:id="@+id/deletebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:text="Delete"
+        android:backgroundTint="#65CDA8"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/updatebtn"
@@ -48,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -95,6 +104,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
             android:weightSum="2">
 
@@ -142,6 +152,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
+            android:layout_marginTop="30dp"
             android:weightSum="2">
 
             <LinearLayout
@@ -187,6 +198,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
             android:weightSum="2">
 
@@ -233,6 +245,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
             android:weightSum="2">
 

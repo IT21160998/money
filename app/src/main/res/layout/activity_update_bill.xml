@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/btimage"
     android:padding="10dp">
 
     <EditText
@@ -10,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:hint="Bill Type"
+        android:hint="Expenses Type"
         android:textSize="20dp"
         android:inputType="textPersonName" />
 
@@ -21,6 +22,7 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Amount"
+        android:inputType="textPersonName"
         android:textSize="20dp"/>
 
     <EditText
@@ -29,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="Bill date"
+        android:hint="Date"
         android:inputType="textPersonName"
         android:textSize="20dp"/>
 
@@ -49,9 +51,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:text="Update Data
-
-" />
+        android:backgroundTint="#65CDA8"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="Update Data" />
 
 
 </LinearLayout>
