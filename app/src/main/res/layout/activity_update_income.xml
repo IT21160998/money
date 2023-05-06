@@ -7,16 +7,16 @@
     android:padding="10dp">
 
     <EditText
-        android:id="@+id/etBillType"
+        android:id="@+id/etIncomeType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:hint="Bill Type"
+        android:hint="Income Type"
         android:textSize="20dp"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etbillAmount"
+        android:id="@+id/etIncomeAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -26,7 +26,7 @@
         android:textSize="20dp"/>
 
     <EditText
-        android:id="@+id/etbillDate"
+        android:id="@+id/etIncomeDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -36,7 +36,7 @@
         android:textSize="20dp"/>
 
     <EditText
-        android:id="@+id/etbillComment"
+        android:id="@+id/etIncomeComment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

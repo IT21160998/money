@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
 
         Income.setOnClickListener {
-            val intent = Intent(this, Bill::class.java)
+            val intent = Intent(this, activity_income_ch1::class.java)
             startActivity(intent)
         }
 

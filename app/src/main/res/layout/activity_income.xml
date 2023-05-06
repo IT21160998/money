@@ -8,24 +8,23 @@
     tools:context=".activities.Expenses">
 
     <!-- Update Button -->
-
-
-    <!-- Delete Button -->
     <Button
         android:id="@+id/updatebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="#65CDA8"
+        android:layout_marginTop="50dp"
         android:text="Update"
+        android:backgroundTint="#65CDA8"
         android:textColor="@color/black"
-        android:textSize="20dp"
         android:textStyle="bold"
+        android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/deletebtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
+
+    <!-- Delete Button -->
     <Button
         android:id="@+id/deletebtn"
         android:layout_width="wrap_content"
@@ -73,7 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Bill id"
+                    android:text="Income id"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -85,7 +84,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvBillId"
+                    android:id="@+id/tvIncomeId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -119,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Bill Type"
+                    android:text="Income Type"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -131,7 +130,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvBillType"
+                    android:id="@+id/tvIncomeType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -166,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Bill Amount"
+                    android:text="Income Amount"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -178,7 +177,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvBillAmount"
+                    android:id="@+id/tvIncomeAmount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -213,7 +212,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Bill Date"
+                    android:text="Income Date"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -225,7 +224,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvBillDate"
+                    android:id="@+id/tvIncomeDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -260,7 +259,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Bill Comment"
+                    android:text="Income Comment"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -272,7 +271,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvBillComment"
+                    android:id="@+id/tvIncomeComment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

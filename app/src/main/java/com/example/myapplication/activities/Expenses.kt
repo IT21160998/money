@@ -97,9 +97,9 @@ class Expenses : AppCompatActivity() {
                 val updateBtn = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
                 etbillType.setText(intent.getStringExtra("billType").toString())
-                etbillType.setText(intent.getStringExtra("billAmount").toString())
-                etbillType.setText(intent.getStringExtra("billDate").toString())
-                etbillType.setText(intent.getStringExtra("billComment").toString())
+                etbillAmount.setText(intent.getStringExtra("billAmount").toString())
+                etbillDate.setText(intent.getStringExtra("billDate").toString())
+                etbillComment.setText(intent.getStringExtra("billComment").toString())
 
                 mDialog.setTitle("Updating $billType Record")
 

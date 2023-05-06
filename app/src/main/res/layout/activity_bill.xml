@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="Expenses"
+        android:text="Expences"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="50dp"
@@ -29,7 +29,7 @@
         android:layout_marginLeft="25dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="Expenses Type"
+        android:hint="Bill Type"
         android:textSize="20dp"
         />
 

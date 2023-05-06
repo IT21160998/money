@@ -12,14 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+
         <activity
-            android:name=".activities.addReminder"
+            android:name=".activities.Income"
             android:exported="false" />
         <activity
-            android:name=".activities.deleteAccount"
-            android:exported="false" />
-        <activity
-            android:name=".activities.Setting"
+            android:name=".activities.Income_fetch1"
             android:exported="false" />
         <activity
             android:name=".activities.add_Income_form"
@@ -27,9 +25,7 @@
         <activity
             android:name=".activities.activity_income_ch1"
             android:exported="false" />
-        <activity
-            android:name=".activities.reminder"
-            android:exported="false" />
+
         <activity
             android:name=".activities.MainActivity"
             android:exported="true">
@@ -41,7 +37,7 @@
         </activity>
         <activity
             android:name=".activities.Expenses"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".activities.fetchingActivity"
             android:exported="false" />
