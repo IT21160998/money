@@ -33,7 +33,7 @@ class fetchingActivity : AppCompatActivity() {
         billRecyclerView.setHasFixedSize(true)
         tvLoadingData = findViewById(R.id.loadingData)
 
-        billList = arrayListOf(BillModel())
+        billList = arrayListOf<BillModel>()
 
         getBillsData()
     }
@@ -56,7 +56,10 @@ class fetchingActivity : AppCompatActivity() {
 
                     mAdaptor.setOnItemClickListner(object :billAdaptor.onItemClickListner{
                         override fun onItemClick(position: Int) {
-                            val intent = Intent(this@fetchingActivity,Expenses::class.java)
+
+                            val intent = Intent(this@fetchingActivity, Expenses::class.java)
+
+                            //put extras
                             intent.putExtra("billId",billList[position].billId)
                             intent.putExtra("billType",billList[position].billType)
                             intent.putExtra("billAmount",billList[position].billAmount)

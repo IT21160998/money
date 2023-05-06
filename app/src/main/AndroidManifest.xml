@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".activities.UpdateBill"
+            android:exported="false" />
+        <activity
+            android:name=".Expenses"
+            android:exported="false" />
+        <activity
             android:name=".activities.Expenses"
             android:exported="false" />
         <activity
