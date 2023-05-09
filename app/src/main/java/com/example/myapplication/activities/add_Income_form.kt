@@ -45,7 +45,7 @@ class add_Income_form : AppCompatActivity() {
         val incomeComment = comment.text.toString()
 
         if(incomeType.isEmpty()){
-            incometype.error = "Please enter income name"
+            incometype.error = "Please enter income type"
         }
 
         if(incomeAmount.isEmpty()){
