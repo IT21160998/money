@@ -71,7 +71,7 @@ tools:context=".activities.MainActivity">
         android:layout_height="71dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="358dp"
-        android:backgroundTint="#B8E3D4"
+        android:backgroundTint="#FFE6F6F2"
 
         android:contentDescription="email"
         app:layout_constraintBottom_toBottomOf="parent"
