@@ -19,8 +19,8 @@ class activity_income_ch1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_income_ch1)
 
-        add  = findViewById(R.id.button4)
-        fetch= findViewById(R.id.button5)
+        add  = findViewById(R.id.button5)
+        fetch= findViewById(R.id.button4)
 
         add.setOnClickListener{
             val intent = Intent(this, add_Income_form::class.java)

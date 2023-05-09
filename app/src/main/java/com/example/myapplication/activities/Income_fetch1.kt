@@ -46,8 +46,8 @@ class Income_fetch1 : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 incomeList.clear()
                 if(snapshot.exists()){
-                    for(incomesnap in snapshot.children){
-                        val incomeData = incomesnap.getValue(incomeModel::class.java)
+                    for(incomeSnap in snapshot.children){
+                        val incomeData = incomeSnap.getValue(incomeModel::class.java)
                         incomeList.add(incomeData!!)
                     }
                     val mAdaptor = incomeAdaptor(incomeList)

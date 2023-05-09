@@ -43,24 +43,6 @@ class Expenses : AppCompatActivity() {
              )
          }
     }
-    private fun deleteRecord(
-        id: String
-    ){
-        val dbref = FirebaseDatabase.getInstance().getReference("bills").child(id)
-        val mTask = dbref.removeValue()
-
-        mTask.addOnSuccessListener {
-            Toast.makeText(
-                this, "Bill details deleted", Toast.LENGTH_LONG).show()
-
-                val intent = Intent(this, fetchingActivity::class.java)
-                finish()
-                startActivity(intent)
-        }.addOnFailureListener{error->
-            Toast.makeText(this,"Deleting error ${error.message}",Toast.LENGTH_LONG).show()
-        }
-    }
-
     private fun initView() {
         tvBillId= findViewById(R.id.tvBillId)
         tvBillType=findViewById(R.id.tvBillType)
@@ -79,6 +61,23 @@ class Expenses : AppCompatActivity() {
         tvBillAmount.text = intent.getStringExtra("billAmount")
         tvBillDate.text = intent.getStringExtra("billDate")
         tvBillComment.text = intent.getStringExtra("billComment")
+
+    }
+    private fun deleteRecord(
+        id: String
+    ){
+        val dbRef = FirebaseDatabase.getInstance().getReference("bills").child(id)
+        val mTask = dbRef.removeValue()
+
+        mTask.addOnSuccessListener {
+            Toast.makeText(this, "Bill details deleted", Toast.LENGTH_LONG).show()
+
+                val intent = Intent(this, fetchingActivity::class.java)
+                finish()
+                startActivity(intent)
+        }.addOnFailureListener{error->
+            Toast.makeText(this,"Deleting error ${error.message}",Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun openUpdateDialog(

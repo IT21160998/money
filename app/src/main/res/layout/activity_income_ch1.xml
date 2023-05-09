@@ -8,11 +8,12 @@
     tools:context=".activities.activity_income_ch1">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button5"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_margin="200dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="344dp"
         android:backgroundTint="#65CDA8"
         android:text="Add your Income"
         android:textColor="@color/black"
@@ -20,13 +21,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button4"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"

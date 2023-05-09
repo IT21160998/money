@@ -16,8 +16,8 @@ class PickCategory : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pickcategory)
 
-        add  = findViewById(R.id.button2)
-        fetch= findViewById(R.id.button3)
+        add  = findViewById(R.id.button3)
+        fetch= findViewById(R.id.button2)
 
         add.setOnClickListener{
             val intent = Intent(this, Bill::class.java)
