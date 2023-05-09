@@ -12,7 +12,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class add_Income_form : AppCompatActivity() {
-    private lateinit var Incometype: EditText
+    private lateinit var incometype: EditText
     private lateinit var amount: EditText
     private lateinit var date: EditText
     private lateinit var comment: EditText
@@ -25,7 +25,7 @@ class add_Income_form : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_income_form)
 
-        Incometype = findViewById(R.id.editText2)
+        incometype = findViewById(R.id.editText2)
         amount = findViewById(R.id.editText3)
         date = findViewById(R.id.editTextDate)
         comment = findViewById(R.id.editText4)
@@ -39,13 +39,13 @@ class add_Income_form : AppCompatActivity() {
 }
 
     private fun saveIncomeData(){
-        val incomeType = Incometype.text.toString()
+        val incomeType = incometype.text.toString()
         val incomeAmount = amount.text.toString()
         val incomeDate = date.text.toString()
         val incomeComment = comment.text.toString()
 
         if(incomeType.isEmpty()){
-            Incometype.error = "Please enter name"
+            incometype.error = "Please enter income name"
         }
 
         if(incomeAmount.isEmpty()){
@@ -69,7 +69,7 @@ class add_Income_form : AppCompatActivity() {
                 Toast.makeText(this,"Data inserted Successfully", Toast.LENGTH_LONG
                 ).show()
 
-                Incometype.text.clear()
+                incometype.text.clear()
                 amount.text.clear()
                 date.text.clear()
                 comment.text.clear()
