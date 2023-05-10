@@ -26,7 +26,7 @@ class Savings : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_saving)
+        setContentView(R.layout.activity_savings)
 
         initView()
         setValuesToViews()
