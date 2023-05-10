@@ -8,13 +8,13 @@ import com.example.myapplication.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class SavingMain : AppCompatActivity() {
+class Saving_main : AppCompatActivity() {
     private lateinit var add: Button
     private lateinit var fetch: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_savingmain)
+        setContentView(R.layout.activity_saving_main)
 
         add = findViewById(R.id.button)
         fetch = findViewById(R.id.button1)

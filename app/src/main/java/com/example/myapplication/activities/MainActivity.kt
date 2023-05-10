@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         Savings.setOnClickListener {
-            val intent = Intent(this, SavingMain::class.java)
+            val intent = Intent(this, Saving_main::class.java)
 
             startActivity(intent)
         }

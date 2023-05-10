@@ -60,10 +60,10 @@ class AddSavings : AppCompatActivity() {
 
             val savingId = dbRef.push().key!!
 
-            val saving = savingModel(savingId,savingType,savingAmount,savingDate,savingComment)
+            val savings = savingModel(savingId,savingType,savingAmount,savingDate,savingComment)
 
 
-            dbRef.child(savingId).setValue(saving)
+            dbRef.child(savingId).setValue(savings)
                 .addOnCompleteListener {
                     Toast.makeText(this,"Data inserted Successfully", Toast.LENGTH_LONG
                     ).show()
