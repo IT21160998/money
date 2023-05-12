@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import com.example.myapplication.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var Income : Button
     private lateinit var Expenses : Button
     private lateinit var Savings : Button
+    private lateinit var Menu : ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +23,13 @@ class MainActivity : AppCompatActivity() {
         Income = findViewById(R.id.button)
         Expenses = findViewById(R.id.Button2)
         Savings = findViewById(R.id.Button3)
+        Menu = findViewById(R.id.menubutton)
 
 
+        Menu.setOnClickListener {
+            val intent = Intent(this, DashboardMenu::class.java)
+            startActivity(intent)
+        }
         Income.setOnClickListener {
             val intent = Intent(this, activity_income_ch1::class.java)
             startActivity(intent)
