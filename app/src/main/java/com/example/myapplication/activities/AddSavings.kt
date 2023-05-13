@@ -35,46 +35,43 @@ class AddSavings : AppCompatActivity() {
             saveSavingData()
     }
 }
-        private fun saveSavingData(){
+        private fun saveSavingData() {
             val savingType = savingtype.text.toString()
             val savingAmount = amount.text.toString()
             val savingDate = date.text.toString()
             val savingComment = comment.text.toString()
 
-            if(savingType.isEmpty()){
-                savingtype.error  = "Please enter income name"
-            }
-
-            if(savingAmount.isEmpty()){
+            if (savingType.isEmpty()) {
+                savingtype.error = "Please enter income name"
+            } else if (savingAmount.isEmpty()) {
                 amount.error = "Please enter amount"
-                }
-
-            if(savingDate.isEmpty()){
+            } else if (savingDate.isEmpty()) {
                 date.error = "Please enter date"
-            }
-
-            if(savingComment.isEmpty()){
+            } else if (savingComment.isEmpty()) {
                 comment.error = "Please enter comment"
+            } else {
+
+
+                val savingId = dbRef.push().key!!
+
+                val savings =
+                    savingModel(savingId, savingType, savingAmount, savingDate, savingComment)
+
+
+                dbRef.child(savingId).setValue(savings)
+                    .addOnCompleteListener {
+                        Toast.makeText(
+                            this, "Data inserted Successfully", Toast.LENGTH_LONG
+                        ).show()
+
+                        savingtype.text.clear()
+                        amount.text.clear()
+                        date.text.clear()
+                        comment.text.clear()
+
+                    }.addOnFailureListener { err ->
+                        Toast.makeText(this, "Error $err.get", Toast.LENGTH_LONG).show()
+                    }
             }
-
-
-            val savingId = dbRef.push().key!!
-
-            val savings = savingModel(savingId,savingType,savingAmount,savingDate,savingComment)
-
-
-            dbRef.child(savingId).setValue(savings)
-                .addOnCompleteListener {
-                    Toast.makeText(this,"Data inserted Successfully", Toast.LENGTH_LONG
-                    ).show()
-
-                    savingtype.text.clear()
-                    amount.text.clear()
-                    date.text.clear()
-                    comment.text.clear()
-
-                }.addOnFailureListener{err ->
-                    Toast.makeText(this,"Error $err.get", Toast.LENGTH_LONG).show()
-                }
         }
 }

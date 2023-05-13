@@ -40,7 +40,7 @@ class Income_fetch1 : AppCompatActivity() {
         incomeRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
 
-        dbRef= FirebaseDatabase.getInstance().getReference("Incomes")
+        dbRef= FirebaseDatabase.getInstance().getReference("Income")
 
         dbRef.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {

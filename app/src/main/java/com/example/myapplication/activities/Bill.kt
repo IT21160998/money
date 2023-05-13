@@ -44,36 +44,32 @@ class Bill : AppCompatActivity() {
 
                 if(billType.isEmpty()){
                     billtype.error = "Please enter bill name"
-                }
-
-                if(billAmount.isEmpty()){
+                } else if(billAmount.isEmpty()){
                     amount.error = "Please enter bill amount"
-                }
-
-                if(billDate.isEmpty()){
+                }else if(billDate.isEmpty()){
                     date.error ="Please enter bill date"
-                }
-
-                if(billComment.isEmpty()){
+                } else if(billComment.isEmpty()){
                     comment.error = "Add comment"
+                } else {
+
+                    val billId = dbRef.push().key!!
+
+                    val bills = BillModel(billId,billType,billAmount,billDate,billComment)
+
+                    dbRef.child(billId).setValue(bills)
+                        .addOnCompleteListener {
+                            Toast.makeText(this,"Data inserted Successfully",Toast.LENGTH_LONG
+                            ).show()
+
+                            billtype.text.clear()
+                            amount.text.clear()
+                            date.text.clear()
+                            comment.text.clear()
+
+                        }.addOnFailureListener{err ->
+                            Toast.makeText(this,"Error $err.get",Toast.LENGTH_LONG).show()
+                        }
                 }
 
-                val billId = dbRef.push().key!!
-
-                val bills = BillModel(billId,billType,billAmount,billDate,billComment)
-
-                dbRef.child(billId).setValue(bills)
-                    .addOnCompleteListener {
-                        Toast.makeText(this,"Data inserted Successfully",Toast.LENGTH_LONG
-                        ).show()
-
-                        billtype.text.clear()
-                        amount.text.clear()
-                        date.text.clear()
-                        comment.text.clear()
-
-                    }.addOnFailureListener{err ->
-                        Toast.makeText(this,"Error $err.get",Toast.LENGTH_LONG).show()
-                    }
             }
 }

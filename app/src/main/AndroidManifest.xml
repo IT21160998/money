@@ -24,7 +24,7 @@
             android:enabled="true" />
 
         <activity
-            android:name=".activities.addReminder"
+            android:name=".activities.AddReminder"
             android:exported="false" />
         <activity
             android:name=".activities.Mainmain"

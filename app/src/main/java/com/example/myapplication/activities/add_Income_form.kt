@@ -46,36 +46,32 @@ class add_Income_form : AppCompatActivity() {
 
         if(incomeType.isEmpty()){
             incometype.error = "Please enter income type"
-        }
-
-        if(incomeAmount.isEmpty()){
+        }else if(incomeAmount.isEmpty()){
             amount.error = "Please enter amount"
-        }
-
-        if(incomeDate.isEmpty()){
+        }else if(incomeDate.isEmpty()){
             date.error ="Please enter date"
-        }
-
-        if(incomeComment.isEmpty()){
+        }else if(incomeComment.isEmpty()){
             comment.error = "Add comment"
+        }else {
+
+            val incomeId = dbRef.push().key!!
+
+            val income = incomeModel(incomeId, incomeType, incomeAmount, incomeDate, incomeComment)
+
+            dbRef.child(incomeId).setValue(income)
+                .addOnCompleteListener {
+                    Toast.makeText(
+                        this, "Data inserted Successfully", Toast.LENGTH_LONG
+                    ).show()
+
+                    incometype.text.clear()
+                    amount.text.clear()
+                    date.text.clear()
+                    comment.text.clear()
+
+                }.addOnFailureListener { err ->
+                    Toast.makeText(this, "Error $err.get", Toast.LENGTH_LONG).show()
+                }
         }
-
-        val incomeId = dbRef.push().key!!
-
-        val income = incomeModel(incomeId,incomeType,incomeAmount,incomeDate,incomeComment)
-
-        dbRef.child(incomeId).setValue(income)
-            .addOnCompleteListener {
-                Toast.makeText(this,"Data inserted Successfully", Toast.LENGTH_LONG
-                ).show()
-
-                incometype.text.clear()
-                amount.text.clear()
-                date.text.clear()
-                comment.text.clear()
-
-            }.addOnFailureListener{err ->
-                Toast.makeText(this,"Error $err.get", Toast.LENGTH_LONG).show()
-            }
     }
 }

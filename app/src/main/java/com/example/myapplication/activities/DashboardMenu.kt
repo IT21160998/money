@@ -33,7 +33,7 @@ class DashboardMenu : AppCompatActivity() {
         }
 
         reminder.setOnClickListener {
-            val intent = Intent(this, addReminder::class.java)
+            val intent = Intent(this, AddReminder::class.java)
             startActivity(intent)
         }
 
