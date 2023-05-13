@@ -47,7 +47,7 @@
         android:layout_width="373dp"
         android:layout_height="58dp"
         android:background="@drawable/rec_2"
-        android:text="   Monthly_plan"
+        android:text="   Monthly plan"
         android:textStyle="bold"
         android:textAlignment="textStart"
         android:textSize="18dp"

@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.myapplication.R
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-
 
 class activity_income_ch1 : AppCompatActivity() {
 
@@ -30,7 +27,6 @@ class activity_income_ch1 : AppCompatActivity() {
             val intent = Intent(this, Income_fetch1::class.java)
             startActivity(intent)
         }
-        val firebase: DatabaseReference = FirebaseDatabase.getInstance().getReference()
     }
 }
 
